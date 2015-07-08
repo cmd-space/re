@@ -1,4 +1,4 @@
-var reApp = angular.module('reApp', ['ngRoute']);
+var reApp = angular.module('reApp', ['ngRoute', 'ui.bootstrap']);
 
 reApp.config(function($routeProvider) {
 	$routeProvider

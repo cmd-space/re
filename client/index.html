@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='reApp'>
 <head>
 	<meta charset="UTF-8">
 	<title>Cash Flow Calculators | Real Estate</title>
@@ -12,9 +12,60 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap.min.js'></script>
+	<script src='stylesheets/bootstrap-gh-pages/ui-bootstrap-tpls-0.13.0.min.js'></script>
 </head>
-<body ng-app='reApp' class=''>
+<body>
+	<div class='navbar navbar-default navbar-fixed-top'>
+		<div class='container'>
+			<div class='navbar-header'>
+				<a href="#/" class='navbar-brand'>RE Calculators</a>
+			</div>
+			<div ng-controller="DropdownCtrl">
+			    <!-- Simple dropdown -->
+			    <ul class='nav navbar-nav'>
+			    	<li class="dropdown" dropdown on-toggle="toggled(open)">
+			    		<a href class="dropdown-toggle" dropdown-toggle>
+				        	Calculators <span class='caret'></span>
+				    	</a>
+				    	<ul class="dropdown-menu">
+							<li>
+								<a href="#/72">Rule of 72s</a>
+							</li>
+							<li>
+								<a href="#/grm">Gross Rent Multiplier</a>
+							</li>
+							<li>
+								<a href="#/gsi">Gross Scheduled Income</a>
+							</li>
+							<li>
+								<a href="#/goi">Gross Operating Income</a>
+							</li>
+							<li>
+								<a href="#/noi">Net Operating Income</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Something else</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+				<ul class='nav navbar-nav navbar-right'>
+					<li>
+						<a href="#">Sign Up</a>
+					</li>
+					<li>
+						<a href="#">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div ng-view=''></div>
 </body>
 </html>

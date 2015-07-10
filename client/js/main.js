@@ -5,6 +5,15 @@ reApp.config(function($routeProvider) {
 		.when('/', {
 			templateUrl: 'partials/index.html'
 		})
+		.when('/72', {
+			templateUrl: 'partials/72.html'
+		})
+		.when('/grm', {
+			templateUrl: 'partials/grm.html'
+		})
+		.when('/gsi', {
+			templateUrl: 'partials/gsi.html'
+		})
 		.otherwise({
 			redirectTo: '/'
 		});
@@ -33,5 +42,23 @@ angular.module('reApp').controller('DropdownCtrl', function ($scope, $log) {
 });
 
 reApp.controller('calcsController', function($scope) {
+	$scope.rule72 = function() {
+		var rate = parseInt($scope.rule72.rate);
+		$scope.calculate72 = 72.73 / rate;
+		$scope.calculate72 = $scope.calculate72.toFixed(2);
+	}
 
+	$scope.grm = function() {
+		var value = parseInt($scope.grm.marketvalue);
+		var income = parseInt($scope.grm.income);
+		$scope.calculateGrm = value / income;
+		$scope.calculateGrm = $scope.calculateGrm.toFixed(2);
+	}
+
+	$scope.gsi = function() {
+		var actual = parseInt($scope.gsi.actual);
+		var vacant = parseInt($scope.gsi.vacant);
+		$scope.calculateGsi = actual + vacant;
+		$scope.calculateGsi = $scope.calculateGsi.toFixed(2);
+	}
 });

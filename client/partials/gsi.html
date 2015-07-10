@@ -1,0 +1,10 @@
+<div class='container'>
+	<div ng-controller='calcsController'>
+		<form>
+			Total rent payable for existing contracts (annually): <input type="number" ng-model='gsi.actual' placeholder='ex. 10000'>
+			Total potential rent from vacant units at market rates (annually): <input type="number" ng-model='gsi.vacant' placeholder='ex. 10000'>
+			<button ng-click='gsi()'>Calculate</button>
+		</form>
+		Gross Rent Multiplier: <b><span ng-bind='calculateGsi'></span></b>
+	</div>
+</div>

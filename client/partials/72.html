@@ -1,0 +1,9 @@
+<div class='container'>
+	<div ng-controller='calcsController'>
+		<form>
+			Rate of growth per year: <input type="number" ng-model='rule72.rate' placeholder='ex. 10'>
+			<button ng-click='rule72()'>Calculate</button>
+		</form>
+		Years to double in value: <b><span ng-bind='calculate72'></span></b>
+	</div>
+</div>

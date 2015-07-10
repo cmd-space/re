@@ -1,0 +1,10 @@
+<div class='container'>
+	<div ng-controller='calcsController'>
+		<form>
+			Market value of property: <input type="number" ng-model='grm.marketvalue' placeholder='ex. 10000'>
+			Gross scheduled income (annually): <input type="number" ng-model='grm.income' placeholder='ex. 10000'>
+			<button ng-click='grm()'>Calculate</button>
+		</form>
+		Gross Rent Multiplier: <b><span ng-bind='calculateGrm'></span></b>
+	</div>
+</div>

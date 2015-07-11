@@ -11,4 +11,27 @@
 	<p>
 		This app will be built out as time goes by to include free registration and membership, which will include the ability to save each of your property's calculations to refer to while doing your due diligence.
 	</p>
+	<div id='form'>
+		<form>
+			<p class='input-title'>Property Title</p> 
+			<p><input type="text" ng-model='report.title' required='true'></p>
+			<p>The following details regard the investment property. The more you fill out, the more accurate your report will become!</p>
+			<p class='input-title'>Address</p> 
+			<p><input type="text" ng-model='report.address'></p>
+			<p class='input-title'>
+				City <span class='form-space'></span> State <span class='form-space'></span> Zip
+			</p>
+			<p>
+				<input type="text" ng-model='report.city'>
+				<span class='input-space'></span>
+				<input type="text" ng-model='report.state'>
+				<span class='input-space'></span>
+				<input type="number" ng-model='report.zip'>
+			</p>
+			<p>Annual Taxes</p>
+			<p><input type="number" ng-model='report.tax'></p>
+			<p>Property Description</p>
+			<p><textarea cols="30" rows="4"></textarea></p>
+		</form>
+	</div>
 </div>
